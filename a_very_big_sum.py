@@ -1,6 +1,8 @@
 def aVeryBigSum(ar):
-    # Write your code here
-    pass
+    numb = 0
+    for i in range(0, len(ar)):
+        numb = numb + ar[i]
+    return numb
 
 
 ar_count = int(input().strip())
