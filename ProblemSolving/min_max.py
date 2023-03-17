@@ -1,6 +1,4 @@
 def miniMaxSum(arr):
-    minimum = 0
-    maximum = 0
     maxnum = max(arr)
     minnum = min(arr)
     maxList = arr.copy()
