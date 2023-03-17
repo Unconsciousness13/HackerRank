@@ -13,9 +13,9 @@ def plusMinus(arr):
     positive_percents = float(100 * positive / n / 100)
     negative_percents = float(100 * negative / n / 100)
     zeros_percents = float(100 * zeros / n / 100)
-    print(*positive_percents)
-    print(*negative_percents)
-    print(*zeros_percents)
+    print(positive_percents)
+    print(negative_percents)
+    print(zeros_percents)
 
 
 n = int(input().strip())
