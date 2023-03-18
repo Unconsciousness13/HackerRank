@@ -17,3 +17,4 @@ result = compareTriplets(a, b)
 
 print(' '.join(map(str, result)))
 print('\n')
+# pass
