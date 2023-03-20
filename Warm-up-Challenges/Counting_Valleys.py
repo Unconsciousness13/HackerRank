@@ -4,9 +4,9 @@ def countingValleys(steps, path):
     for i in range(steps):
         if path[i] == "U":
             deepth += 1
-        if path[i] == "D":
+        else:
             deepth -= 1
-        if deepth > 0:
+        if deepth == 0 and path[i] == "U":
             highest += 1
     return highest
 
