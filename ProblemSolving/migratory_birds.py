@@ -1,6 +1,12 @@
+from collections import Counter
+
+
 def migratoryBirds(arr):
-    # Write your code here
-    pass
+
+    hmm = Counter(arr)
+
+    maxvalue = max(hmm, key=hmm.get)
+    return maxvalue
 
 
 arr_count = int(input().strip())
