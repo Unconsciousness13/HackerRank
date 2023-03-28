@@ -1,12 +1,15 @@
-from collections import Counter
-
-
 def migratoryBirds(arr):
+    max_count = -100
+    max_id = -100
 
-    hmm = Counter(arr)
+    for i in range(1, 6):
+        if (arr.count(i) > max_count):
+            max_count = arr.count(i)
+            max_id = i
+        elif (arr.count(i) == max_count and i < max_id):
+            max_id = i
 
-    maxvalue = max(hmm, key=hmm.get)
-    return maxvalue
+    return max_id
 
 
 arr_count = int(input().strip())
