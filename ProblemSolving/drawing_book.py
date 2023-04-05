@@ -1,6 +1,5 @@
 def pageCount(n, p):
-    # Write your code here
-    pass
+    return min(int(p/2), int(n/2) - int(p/2))
 
 
 n = int(input().strip())
