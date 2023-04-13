@@ -1,17 +1,21 @@
+from collections import Counter
+
+
 def isValid(s):
-    s_arr_frequence = []
-    s_arr = [i for i in s]
-    s_unique = set(s_arr)
+    count = list(Counter(s).values())
+    frequencies = set(count)
 
-    for i in s_unique:
-        s_arr_frequence.append(s_arr.count(i))
+    if len(frequencies) == 1:
+        return "YES"
+    if len(frequencies) > 2:
+        return "NO"
+    one_time_frequency = count.count(1)
+    if one_time_frequency == 1:
+        return "YES"
+    if one_time_frequency > 1:
+        return "NO"
+    list_set = list(frequencies)
+    if abs(list_set[0]-list_set[1]) == 1:
+        return "YES"
 
-    check = s_arr_frequence[0]
-    count = 1
-    for i in range(len(s_arr_frequence)-1):
-        if check - s_arr_frequence[i+1] == 0:
-            count += 1
-    if count == len(s_arr_frequence) or count == len(s_arr_frequence)-1:
-        return 'YES'
-    else:
-        return 'NO'
+    return "NO"
